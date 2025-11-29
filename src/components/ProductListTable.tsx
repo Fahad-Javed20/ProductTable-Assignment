@@ -19,8 +19,8 @@ const ProductListTable = ({ products }: ProductListTableProps) => {
         </thead>
 
         <tbody>
-          {products.map((product, index) => (
-            <tr key={index} className="border">
+          {products.map((product) => (
+            <tr key={product.id} className="border">
               <td className="border px-2">{product.name}</td>
               <td className="border px-2">{product.price}</td>
               <td className="border px-2">{product.category}</td>
