@@ -6,20 +6,23 @@ import type { ProductFormType } from "../types/ProductFormType";
 const ProductDashboard = () => {
   const [products, setProducts] = useState<ProductFormType[]>([]);
 
-useEffect(() => {
-  const fetchData = async () => {
-    const response = await fetch('/product.json'); 
-    const data = await response.json();
-    setProducts(data); 
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/product.json");
+      const data = await response.json();
+      setProducts(data.products);
+    };
 
-  
     fetchData();
   }, []);
 
+  const addProduct = (newProduct: ProductFormType) => {
+    setProducts((prev) => [...prev, newProduct]);
+  };
+
   return (
     <div>
-      <AddProductForm  />
+      <AddProductForm onAddProduct={addProduct} />
       <ProductListTable products={products} />
     </div>
   );
