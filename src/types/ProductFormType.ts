@@ -1,8 +1,9 @@
 export type ProductFormType = {
     id:number
     name:string
-    price:number
+    price:string
     category:string
     rating:number
     quantity:number
 }
+

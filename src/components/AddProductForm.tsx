@@ -25,7 +25,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
         className="space-y-5 bg-white p-2 rounded-2xl shadow"
       >
         <div>
-          <label className="block font-medium mb-1">Name</label>
+          <label className="block font-medium mb-1 text-left">Name</label>
           <input
             {...register("name", { required: true })}
             className="w-full border rounded-lg p-2"
@@ -34,7 +34,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Price</label>
+          <label className="block font-medium mb-1 text-left">Price</label>
           <input
             type="number"
             {...register("price", { required: true })}
@@ -44,7 +44,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Category</label>
+          <label className="block font-medium mb-1 text-left">Category</label>
           <select
             {...register("category", { required: true })}
             className="w-full border rounded-lg p-2"
@@ -58,7 +58,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Quantity</label>
+          <label className="block font-medium mb-1 text-left">Quantity</label>
           <input
             type="number"
             {...register("quantity", { required: true })}
@@ -67,7 +67,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Rating</label>
+          <label className="block font-medium mb-1 text-left">Rating</label>
           <div className="flex space-x-2">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
